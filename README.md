@@ -1,7 +1,7 @@
 # NucleoSite - Nuclear Site Selection Tool
 
 ## Project Overview
-NucleoSite is an innovative desktop application developed to assist in selecting optimal sites for nuclear facilities in India. The tool uses Python and PyQt5 to provide interactive geographical visualizations of dam locations, integrating extensive data analysis to assess dam safety and environmental impacts effectively.
+NucleoSite is a cutting-edge desktop application designed to aid in the selection of optimal sites for nuclear facilities in India. Built with Python and PyQt5, the tool offers interactive geographic visualizations of dam locations, integrating comprehensive data analysis to evaluate dam safety and environmental impacts efficiently.
 
 ![NucleoSite Main Interface](images/main_interface.png)
 
@@ -9,23 +9,23 @@ NucleoSite is an innovative desktop application developed to assist in selecting
 
 
 ## Key Features
-- **Interactive Map Visualization**: Users can explore dam locations across various states with tools to zoom and gather more detailed data interactively.
+- **Interactive Map Visualization**: Users can navigate through dam locations across different states with options to zoom and access detailed data interactively.
 
-![Data Analysis Interface](images/dams_India.png)
+![Data Analysis Interface](optics/dams_India.png)
 
 *Dams in India and potential grid locations for Nuclear Plants*
 
   
-- **Advanced Data Analysis**: Incorporates multiple data layers to assess factors such as seismic risks, population density, and proximity to water bodies.
+- **Advanced Data Analysis**: Features multiple data layers to evaluate aspects such as seismic risks, population density, and proximity to water sources.
 
-![Data Analysis Interface](images/buffer_zone.png)
+![Data Analysis Interface](optics/buffer_zone.png)
 
 Grid of potential locations within a 10 km buffer zone at a 1 km distance*
 
 - **Dynamic Reporting**: Enables the generation and exportation of detailed PDF reports summarizing user analysis findings.
 - **Customizable Search Parameters**: Users can define specific search criteria and thresholds, tailoring the output to particular needs.
 
-![Report Generation Module](images/report_generation.png)
+![Report Generation Module](optics/report_generation.png)
 
 *Example of a report generation module with output preview.*
 
