@@ -3,7 +3,7 @@
 ## Project Overview
 NucleoSite is a cutting-edge desktop application designed to aid in the selection of optimal sites for nuclear facilities in India. Built with Python and PyQt5, the tool offers interactive geographic visualizations of dam locations, integrating comprehensive data analysis to evaluate dam safety and environmental impacts efficiently.
 
-![NucleoSite Main Interface](images/main_interface.png)
+![NucleoSite Main Interface](optics/app.png)
 
 *The main interface of NucleoSite shows the interactive map.*
 
@@ -11,7 +11,7 @@ NucleoSite is a cutting-edge desktop application designed to aid in the selectio
 ## Key Features
 - **Interactive Map Visualization**: Users can navigate through dam locations across different states with options to zoom and access detailed data interactively.
 
-![Data Analysis Interface](optics/dams_India.png)
+![Data Analysis Interface](optics/grid_location.png)
 
 *Dams in India and potential grid locations for Nuclear Plants*
 
@@ -25,7 +25,7 @@ Grid of potential locations within a 10 km buffer zone at a 1 km distance*
 - **Dynamic Reporting**: Enables the generation and exportation of detailed PDF reports summarizing user analysis findings.
 - **Customizable Search Parameters**: Users can define specific search criteria and thresholds, tailoring the output to particular needs.
 
-![Report Generation Module](optics/report_generation.png)
+![Report Generation Module](optics/report.png)
 
 *Example of a report generation module with output preview.*
 
@@ -39,4 +39,4 @@ Grid of potential locations within a 10 km buffer zone at a 1 km distance*
 - Mentorship provided by Prof. Sushobhan Sen, IIT Gandhinagar.
 - Developed by Nirman Jaiswal and Om Gupta.
 
-![Poster](images/Poster_Presentation.jpg)
+![Poster](optics/Poster_Presentation.jpg)
