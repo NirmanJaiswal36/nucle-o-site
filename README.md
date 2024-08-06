@@ -1,2 +1,2 @@
-# nucle o site
+# Nucleosite
  A Nuclear Siting Dekstop Application
