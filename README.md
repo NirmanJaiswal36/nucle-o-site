@@ -37,4 +37,4 @@ Grid of potential locations within a 10 km buffer zone at a 1 km distance*
 - Mentorship provided by Prof. Sushobhan Sen, IIT Gandhinagar.
 - Developed by Nirman Jaiswal and Om Gupta.
 
-![Poster](optics/Poster_Presentation.jpg)
+![Poster](Optics/Poster_Presentation.jpg)
