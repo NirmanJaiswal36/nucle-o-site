@@ -1,40 +1,102 @@
-# NucleoSite - Nuclear Site Selection Tool
+# NucleoSite
 
-## Project Overview
-NucleoSite is a cutting-edge desktop application designed to aid in the selection of optimal sites for nuclear facilities in India. Built with Python and PyQt5, the tool offers interactive geographic visualizations of dam locations, integrating comprehensive data analysis to evaluate dam safety and environmental impacts efficiently.
+A pilot desktop application designed to streamline the process of finding suitable locations for nuclear power plants.
 
-![NucleoSite Main Interface](Optics/app.png)
+## Features
 
-*The main interface of NucleoSite shows the interactive map.*
+- Interactive map interface with zoom and coordinate conversion
+- State-wise dam visualization and selection
+- Detailed parameter analysis including:
+  - Earthquake risk assessment
+  - Population density analysis
+  - Distance from highways and airports
+  - Soil/geotechnical conditions
+  - Mining activity analysis
+  - Wind speed data
+- Grid point visualization
+- Comprehensive PDF report generation
 
+## Project Structure
 
-## Key Features
-![Data Analysis Interface](Optics/grid_locations.png)
+```
+nucle-o-site/
+├── src/                    # Source code
+│   ├── core/              # Core functionality
+│   │   ├── application.py        # Main application logic
+│   │   ├── data_manager.py      # Data handling and management
+│   │   ├── map_manager.py       # Map visualization and interaction
+│   │   └── coordinate_*.py      # Coordinate transformation utilities
+│   ├── ui/                # User interface components
+│   │   ├── main_window.py       # Main application window
+│   │   └── splash_screen.py     # Application splash screen
+│   └── utils/             # Utility functions
+│       ├── config.py            # Configuration management
+│       ├── constants.py         # Application constants
+│       └── report_generator.py  # PDF report generation
+├── data/                  # Data directory
+│   ├── states/           # State boundary shapefiles
+│   ├── dams/            # Dam location data
+│   ├── grid/            # Grid point data
+│   ├── highways/        # Highway network data
+│   ├── airports/        # Airport location data
+│   ├── population/      # Population density data
+│   └── wind/           # Wind speed data
+├── reports/              # Generated reports
+└── Optics/              # UI resources and images
+```
 
-*Dams in India and potential grid locations for Nuclear Plants*
+## Setup
 
-- **Interactive Map Visualization**: Users can navigate through dam locations across different states with options to zoom and access detailed data interactively.
-- **Advanced Data Analysis**: Features multiple data layers to evaluate aspects such as seismic risks, population density, and proximity to water sources.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/nucle-o-site.git
+cd nucle-o-site
+```
 
-![Data Analysis Interface](Optics/buffer_zone.png)
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+.\venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
+```
 
-Grid of potential locations within a 10 km buffer zone at a 1 km distance*
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-- **Dynamic Reporting**: Enables the generation and exportation of detailed PDF reports summarizing user analysis findings.
-![Report Generation Module](Optics/report.png)
+4. Prepare data directories:
+```bash
+python -c "from src.core.data_manager import DataManager; DataManager()"
+```
 
-- **Customizable Search Parameters**: Users can define specific search criteria and thresholds, tailoring the output to particular needs.
+5. Run the application:
+```bash
+python app.py
+```
 
-*Example of a report generation module with output preview.*
+## Data Requirements
 
-## Technologies Used
-- **Python**: The core programming language used.
-- **PyQt5**: Utilized to create the graphical user interface.
-- **Matplotlib & GeoPandas**: For processing and visualizing geospatial data.
-- **FPDF**: For generating PDF reports.
+Place your data files in the following structure:
+- `data/states/states.shp` - State boundary shapefile
+- `data/dams/dams.shp` - Dam locations shapefile
+- `data/grid/grid_points.shp` - Grid points shapefile
+- `data/highways/national_highways.shp` - Highway network shapefile
+- `data/airports/airports.shp` - Airport locations shapefile
+- `data/population/population_density.tif` - Population density raster
+- `data/wind/wind_speed.csv` - Wind speed data
 
-## Acknowledgements
-- Mentorship provided by Prof. Sushobhan Sen, IIT Gandhinagar.
-- Developed by Nirman Jaiswal and Om Gupta.
+## Dependencies
 
-![Poster](Optics/Poster_Presentation.jpg)
+- PyQt5
+- Matplotlib
+- GeoPandas
+- Shapely
+- Rasterio
+- ReportLab
+- NumPy
+- Pandas
+
+## Developers
+
+Developed by Om Gupta and Nirman Jaiswal under the mentorship of Prof. Sushobhan Sen at IIT Gandhinagar, as part of the Summer Research Internship Program (SRIP) 2024.
